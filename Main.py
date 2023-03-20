@@ -14,7 +14,19 @@ class Calculator:
         print(self.nr)
 
 
+class Calculator2(Calculator):
+    def __init__(self, nr):
+        super().__init__(nr)
+
+    def negativ(self):
+        self.nr = -self.nr
+
+
 c = Calculator(4)
 c.multiplication(3)
 c.division(2)
 c.output_result()
+c1 = Calculator2(2)
+c1.negativ()
+c1.multiplication(2)
+c1.output_result()
